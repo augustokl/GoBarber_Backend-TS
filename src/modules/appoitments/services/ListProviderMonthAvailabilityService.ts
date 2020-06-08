@@ -18,7 +18,7 @@ type IResponse = Array<{
 @injectable()
 class ListProviderMonthAvailabilityService {
   constructor(
-    @inject('AppoitmentsRepository')
+    @inject('AppointmentsRepository')
     private appoitmentsRepository: IAppoitmentsRepository,
   ) {}
 
@@ -34,6 +34,8 @@ class ListProviderMonthAvailabilityService {
         year,
       },
     );
+
+    console.log(appoitments);
 
     const numberOfDaysInMonth = getDaysInMonth(new Date(year, month - 1));
 
