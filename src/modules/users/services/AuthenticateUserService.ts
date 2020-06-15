@@ -49,6 +49,7 @@ class AuthenticaUserService {
       subject: user.id,
       expiresIn,
     });
+
     return {
       user,
       token,
